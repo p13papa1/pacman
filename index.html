@@ -72,7 +72,7 @@
             this.load.image('str', 'assets/str.png');
             this.load.image('dot', 'assets/dot.png');
             this.load.image('tiles', 'assets/pacman-tiles.png');
-            this.load.spritesheet('pacman', 'assets/pacman.png', 32, 32);
+            this.load.spritesheet('pacman', 'assets/pacman.png');
             this.load.tilemap('map', 'assets/pacman-map.json', null, Phaser.Tilemap.TILED_JSON);
 
             //  Needless to say, graphics (C)opyright Namco
@@ -88,7 +88,7 @@
 
             this.dots = this.add.physicsGroup();
 		//eisagwgh bonus
-	    this.map.createFromTiles(5, this.safetile, 'str', this.layer, this.dots);
+	    this.map.createFromTiles(36, this.safetile, 'str', this.layer, this.dots);
             this.map.createFromTiles(7, this.safetile, 'dot', this.layer, this.dots);
 
             //  The dots will need to be offset by 6px to put them back in the middle of the grid
