@@ -113,6 +113,17 @@
             
             //emfanizei to keimeno tou score kai to arxikopoiei
             this.scoreText = game.add.text(0, 520, 'Score: 0', { fontSize: '34px Arial', fill: 'green' });
+		
+	    lifes = game.add.group();
+            game.add.text(game.world.width - 340, 500, 'Lifes : ', { fontSize: '34px Arial', fill: 'white' });
+            
+            for (var i = 0; i < 4; i++) 
+		    {
+			var pacman = lifes.create(game.world.width - 235 + (30 * i), 517, 'pacman');
+			pacman.anchor.setTo(0.5, 0.5);
+			pacman.angle = 0;
+			pacman.alpha = 0.6;
+		    }
 
         },
 
